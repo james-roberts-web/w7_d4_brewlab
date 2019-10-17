@@ -6,6 +6,7 @@
         <beer-detail :beer='selectedBeer'></beer-detail>
       </div>
   </div>
+
 </template>
 
 <script>
@@ -21,7 +22,8 @@ export default {
   data () {
     return {
       beers: [],
-      selectedBeer: null
+      selectedBeer: null,
+      favouriteBeers: []
     };
   },
 
@@ -35,6 +37,11 @@ export default {
       })
   },
 
+methods: {
+  addToFavourites: function() {
+    this.favouriteBeer.push(this.selectedBeer)
+  }
+},
   components: {
     "beers-list": BeersList,
     "beer-detail": BeerDetail,
