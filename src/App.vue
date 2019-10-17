@@ -4,6 +4,7 @@
       <div class="main-container">
         <beers-list :beers='beers'></beers-list>
         <beer-detail :beer='selectedBeer'></beer-detail>
+        <beers-list :beers='favouriteBeers'></beers-list>
       </div>
   </div>
 
